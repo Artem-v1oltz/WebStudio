@@ -1,0 +1,69 @@
+body {
+    font-family: "Roboto";
+}
+
+.header-logo {
+    text-decoration: none;
+    font-family: "RaleWay";
+}
+
+.nav-link-studio {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.28px;
+    text-decoration: none;
+}
+
+.nav-portfolio {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.28px;
+}
+
+.nav-contacts {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.28px;
+}
+
+.header-email {
+    color: #2196F3;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.28px;
+}
+
+.header-tel {
+color: #757575;
+font-size: 14px;
+font-weight: 500;
+letter-spacing: 0.28px;
+}
+
+.header-bg {
+    background-color: black;
+}
+
+.header-h1 {
+color: #FFF;
+text-align: center;
+font-size: 44px;
+font-weight: 900;
+line-height: 60px;
+letter-spacing: 2.64px;
+}
+
+.header-button {
+border-radius: 4px;
+background: #2196F3;
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.button-p {
+color: #FFF;
+text-align: center;
+font-size: 16px;
+font-weight: 700;
+line-height: 30px;
+letter-spacing: 0.96px;
+}
