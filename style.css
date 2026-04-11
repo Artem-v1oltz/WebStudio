@@ -3,15 +3,22 @@ body {
 }
 
 .header-logo {
-    text-decoration: none;
-    font-family: "RaleWay";
+width: 145.0px;
+height: 31.0px;
+color: #000;
+font-family: Raleway;
+font-size: 26px;
+font-weight: 700;
+letter-spacing: 0.78px;
+text-decoration: none
 }
 
 .nav-link-studio {
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.28px;
-    text-decoration: none;
+color: #2196F3;
+font-size: 14px;
+font-weight: 500;
+letter-spacing: 0.28px;
+text-decoration: none
 }
 
 .nav-portfolio {
@@ -66,4 +73,110 @@ font-size: 16px;
 font-weight: 700;
 line-height: 30px;
 letter-spacing: 0.96px;
+}
+
+.main-hero p {
+color: #757575;
+font-size: 14px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0.42px;
+}
+
+.main-hero h2 {
+color: #212121;
+font-size: 14px;
+font-weight: 700;
+letter-spacing: 0.42px;
+}
+
+.main-about h2 {
+color: #212121;
+text-align: center;
+font-size: 36px;
+font-weight: 700;
+letter-spacing: 1.08px;
+}
+
+.main-team h2 {
+color: #212121;
+text-align: center;
+font-size: 36px;
+font-weight: 700;
+letter-spacing: 1.08px;
+}
+
+.main-team {
+    background: #F5F4FA;
+}
+
+.team-members .members-description {
+    background: #FFF;
+    width: 270.0px;
+    height: 368.0px;
+}
+
+.members-photo {
+width: 270.0px;
+height: 260.0px;
+}
+
+.members-description p {
+color: #757575;
+text-align: center;
+font-size: 16px;
+font-weight: 400;
+letter-spacing: 0.48px;
+}
+
+.members-description h3 {
+text-align: center;
+font-size: 16px;
+font-weight: 500;
+letter-spacing: 0.48px;
+}
+
+.footer-logo {
+color: #FFF;
+font-family: Raleway;
+font-size: 26px;
+font-weight: 700;
+letter-spacing: 0.78px;
+text-decoration: none
+}
+
+.footer-tel {
+width: 231.0px;
+height: 21.0px;
+color: rgba(255, 255, 255, 0.60);
+font-size: 14px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0.42px;
+}
+
+.footer-email {
+width: 136.0px;
+height: 21.0px;
+color: rgba(255, 255, 255, 0.60);
+font-size: 14px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0.42px;
+}
+
+footer {
+    background-color: #2F303A;
+}
+
+.adress-location {
+color: #FFF;
+font-size: 14px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0.42px;
+}
+
+.logo-web {
+    color:#2196F3
 }
