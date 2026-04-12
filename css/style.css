@@ -22,12 +22,16 @@ text-decoration: none
 }
 
 .nav-portfolio {
+    color:#000;
+    text-decoration: none;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.28px;
 }
 
 .nav-contacts {
+    color:#000;
+    text-decoration: none;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.28px;
