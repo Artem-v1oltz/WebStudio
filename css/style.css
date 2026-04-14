@@ -114,12 +114,6 @@ letter-spacing: 1.08px;
     background: #F5F4FA;
 }
 
-.team-members .members-description {
-    background: #FFF;
-    width: 270.0px;
-    height: 368.0px;
-}
-
 .members-photo {
 width: 270.0px;
 height: 260.0px;
@@ -127,14 +121,13 @@ height: 260.0px;
 
 .members-description p {
 color: #757575;
-text-align: center;
+
 font-size: 16px;
 font-weight: 400;
 letter-spacing: 0.48px;
 }
 
 .members-description h3 {
-text-align: center;
 font-size: 16px;
 font-weight: 500;
 letter-spacing: 0.48px;
@@ -179,6 +172,7 @@ font-size: 14px;
 font-weight: 400;
 line-height: 24px;
 letter-spacing: 0.42px;
+font-style:normal
 }
 
 .logo-web {
