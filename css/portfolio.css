@@ -3,185 +3,120 @@ body {
 }
 
 .header-logo {
-font-family: Raleway;
-width: 145.0px;
-height: 31.0px;
-color: #000;
-font-size: 26px;
-font-weight: 700;
-letter-spacing: 0.78px;
-text-decoration: none
-}
-
-.logo-web {
-    color: #2196F3
-}
-
-.nav-link-studio {
-color: #000;
-font-size: 14px;
-font-weight: 500;
-letter-spacing: 0.28px;
-text-decoration: none
-}
-
-.nav-portfolio {
-    color:#2196F3;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.28px;
+    font-family: Raleway;
+    color: #212121;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.78px;
     text-decoration: none;
 }
 
-.nav-contacts {
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.28px;
-    text-decoration: none;
-    color:#000
-}
-
-.header-email {
+.header-logo-accent {
     color: #2196F3;
+}
+
+.header-navigation-link:hover {
+    color: #2196F3;
+}
+
+.header-navigation-link {
+    color: #212121;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.28px;
+    text-decoration: none;
 }
 
-.header-tel {
-color: #757575;
-font-size: 14px;
-font-weight: 500;
-letter-spacing: 0.28px;
+.header-contacts-link {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.28px;
+    text-decoration: none;
 }
 
-.footer-logo {
-color: #FFF;
-font-family: Raleway;
-font-size: 26px;
-font-weight: 700;
-letter-spacing: 0.78px;
-text-decoration: none
+.header-contacts-item:first-child .header-contacts-link {
+    color: #2196F3;
 }
 
-.footer-tel {
-width: 231.0px;
-height: 21.0px;
-color: rgba(255, 255, 255, 0.60);
-font-size: 14px;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: 0.42px;
+.header-contacts-item:last-child .header-contacts-link {
+    color: #757575;
 }
 
-.footer-email {
-width: 136.0px;
-height: 21.0px;
-color: rgba(255, 255, 255, 0.60);
-font-size: 14px;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: 0.42px;
-}
-
-footer {
+.footer {
     background-color: #2F303A;
 }
 
-.adress-location {
-color: #FFF;
-font-size: 14px;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: 0.42px;
+.footer-logo {
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.78px;
+    text-decoration: none;
 }
 
-.list-project {
-    width: 370.0px;
-    height: 404.0px;
+.footer-logo-accent {
+    color: #2196F3;
+}
+
+.footer-address {
+    font-style: normal;
+}
+
+.footer-address-item {
+    color: #FFF;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.42px;
+}
+
+.footer-address-link {
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.42px;
+    text-decoration: none;
+}
+
+.projects-item {
+    width: 370px;
     border: 1px solid #EEE;
     background: #FFF;
 }
 
-.project-photo {
-    width: 370.0px;
-    height: 294.0px;
+.projects-image {
+    width: 370px;
+    height: 294px;
 }
 
-.list-project h2 {
-color: #212121;
-font-size: 18px;
-font-weight: 700;
-line-height: 36px;
-letter-spacing: 1.08px;
+.projects-title {
+    color: #212121;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 1.08px;
 }
 
-.list-project p {
-color: #757575;
-font-size: 16px;
-font-weight: 400;
-line-height: 30px;
-letter-spacing: 0.48px;
+.projects-category {
+    color: #757575;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.48px;
 }
 
-#filter1 {
-font-family: "Roboto";
-color: #FFF;
-text-align: center;
-font-size: 16px;
-font-weight: 500;
-line-height: 26px;
-letter-spacing: 0.48px;
-background-color: #2196F3;
-width: 73.0px;
-height: 38.0px;
+.filters-button {
+    font-family: "Roboto";
+    color: #212121;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0.48px;
+    height: 38px;
 }
 
-#filter2 {
-font-family: "Roboto";
-width: 125.0px;
-height: 38.0px;
-color: #212121;
-text-align: center;
-font-size: 16px;
-font-weight: 500;
-line-height: 26px;
-letter-spacing: 0.48px;
-}
-
-#filter3 {
-font-family: "Roboto";
-color: #212121;
-text-align: center;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 26px;
-letter-spacing: 0.48px;
-width: 112.0px;
-height: 38.0px;
-}
-
-#filter4 {
-font-family: "Roboto";
-color: #212121;
-text-align: center;
-font-size: 16px;
-font-weight: 500;
-line-height: 26px;
-letter-spacing: 0.48px;
-width: 103.0px;
-height: 38.0px;
-}
-
-#filter5 {
-font-family: "Roboto";
-width: 130.0px;
-height: 38.0px;
-color: #212121;
-text-align: center;
-font-size: 16px;
-font-weight: 500;
-line-height: 26px;
-letter-spacing: 0.48px;
+.filters-button-active {
+    color: #FFF;
+    background-color: #2196F3;
 }
