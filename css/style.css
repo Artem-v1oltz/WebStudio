@@ -2,6 +2,10 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+ul {
+    list-style:none;
+}
+
 .header-logo {
     font-family: Raleway;
     font-size: 26px;
