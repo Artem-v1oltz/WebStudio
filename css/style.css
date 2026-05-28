@@ -312,6 +312,8 @@ font-weight: 500;
 line-height: 1.62;
 letter-spacing: 0.48px;
 border-radius: 4px;
+outline:none;
+border:none;
 }
 .portfolio-list{
 list-style: none;
@@ -408,7 +410,6 @@ color: var(--text-white);
 background-color: var(--accent-color);
 }
 .container{
-    outline: 2px dashed red;
     width: 1200px;
         margin: 0 auto;
         padding: 0 15px;
