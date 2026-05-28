@@ -441,3 +441,7 @@ display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
+
+.poster {
+    height: 157.60px;
+}
