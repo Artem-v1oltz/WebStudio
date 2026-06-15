@@ -7,6 +7,7 @@
 --portfolio-bg: rgba(33, 150, 243, 0.90);
 }
 body {
+
 font-family: "Roboto", sans-serif;
 }
 .header{
@@ -21,7 +22,7 @@ font-style: normal;
 font-weight: 400;
 line-height: 1.71;
 letter-spacing: 0.42px;
-text-decoration: none;
+    
 }
 .header-navigation{
 display: flex;
@@ -36,7 +37,7 @@ margin-left: 93px;
     font-weight: 400;
     line-height: 1.71;
     letter-spacing: 0.42px;
-    text-decoration:none;
+
 }
 .header-logo {
 color: #000; 
@@ -46,6 +47,20 @@ font-weight: 700;
 line-height: 1.19;
 letter-spacing: 0.78px;
 text-decoration:none;
+animation-duration: 3000ms;
+animation-name: LogoScale;
+animation-iteration-count: infinite;
+}
+@keyframes LogoScale{
+0%{
+scale: 1;
+}
+50%{
+scale: 1.15;
+}
+100%{
+scale: 1;
+}
 }
 .header-logo-blue{
 color: var(--accent-color);    
@@ -153,7 +168,20 @@ line-height: 1.14;
 letter-spacing: 0.42px;
 list-style: none;
 flex: 1;
-
+}
+@keyframes ftItemShake{
+25%{
+    transform: rotate(1deg);
+}
+50%{
+    transform: rotate(0);
+}
+75%{
+    transform: rotate(-1deg);
+}
+100%{
+transform: rotate(0);
+}
 }
 .features-text{
     color: var(--text-color);
@@ -185,6 +213,10 @@ margin-bottom: 50px;
     justify-content: center;
     gap: 30px;
 }
+.gallery-item{
+    animation-duration: 5000ms;
+animation-name: ftItemShake;
+}
 .team{
     background-color: #F5F4FA;
     padding-top: 94px;
@@ -204,6 +236,7 @@ height: 260.0px;
 .team-item{
 background-color: var(--text-white) ;
 }
+@keyframes tItem
 .team-title{
 color: var(--title-color);
 font-family: Roboto;
@@ -272,7 +305,6 @@ font-style: normal;
 font-weight: 400;
 line-height: 1.71;
 letter-spacing: 0.42px;
-text-decoration:none;
 }
 .contacts-tel{
     color: rgba(255, 255, 255, 0.60);
@@ -282,7 +314,6 @@ font-style: normal;
 font-weight: 400;
 line-height: 1.71;
 letter-spacing: 0.42px;
-text-decoration:none;
 }
 .contacts-item:nth-child(2){
     margin-bottom: 9px;
@@ -312,8 +343,6 @@ font-weight: 500;
 line-height: 1.62;
 letter-spacing: 0.48px;
 border-radius: 4px;
-outline:none;
-border:none;
 }
 .portfolio-list{
 list-style: none;
@@ -410,6 +439,7 @@ color: var(--text-white);
 background-color: var(--accent-color);
 }
 .container{
+    outline: 2px dashed red;
     width: 1200px;
         margin: 0 auto;
         padding: 0 15px;
@@ -441,8 +471,4 @@ margin-bottom: 94px;
 display: flex;
     justify-content: space-between;
     align-items: flex-start;
-}
-
-.poster {
-    height: 105.60px;
 }
