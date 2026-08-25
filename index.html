@@ -25,13 +25,16 @@
     <header class="header">
       <div class="container header-wrap">
         <a href="./index.html" class="header-logo">Web<span class="logo-accent">Studio</span></a>
+        <button class="menu-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
         <nav class="header-nav">
           <ul class="header-list">
             <li class="header-item">
               <a class="header-link" href="./index.html">Студія</a>
             </li>
             <li class="header-item">
-              <a class="header-link" href="index.html">Портфоліо</a>
+              <a class="header-link" href="portfolio.html">Портфоліо</a>
             </li>
             <li class="header-item">
               <a class="header-link" href="#">Контакти</a>
@@ -53,6 +56,7 @@
           </ul>
         </address>
       </div>
+      <div class="overlay" aria-hidden="true"></div>
     </header>
     <main>
       <section id="qwe" class="hero">
@@ -210,5 +214,6 @@
       </div>
     </footer>
     <a class="scroll" href="#qwe"><img class="scroll-icon" src="img/arrow.png" alt="arrow"></a>
+    <script src="js/mobile-menu.js"></script>
   </body>
 </html>
