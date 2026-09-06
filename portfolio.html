@@ -1,295 +1,260 @@
 <!doctype html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
-      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>Портфоліо</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/portfolio.css" />
-      <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container header-wrap">
-        <a href="./index.html" class="header-logo"
-          >Web<span class="logo-accent">Studio</span></a>
-<button class="mobile-menu-button" type="button" aria-label="Відкрити меню" aria-expanded="false">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
 
-<div class="mobile-menu">
-  <nav class="mobile-menu-nav" aria-label="Мобільна навігація">
-    <ul>
-      <li><a href="./index.html">Студія</a></li>
-      <li><a href="./portfolio.html">Портфоліо</a></li>
-      <li><a href="#">Контакти</a></li>
-    </ul>
-  </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <address class="mobile-menu-contacts">
-    <a class="mobile-menu-phone" href="tel:+380961111111">+38 096 111 11 11</a>
-    <a class="mobile-menu-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
-  </address>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+    integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Портфоліо</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/portfolio.css" />
+  <link rel="stylesheet" href="css/style.css" />
 
-  <ul class="mobile-menu-socials">
-    <li><a href="#" aria-label="Instagram">Instagram</a></li>
-    <li><a href="#" aria-label="Twitter">Twitter</a></li>
-    <li><a href="#" aria-label="Facebook">Facebook</a></li>
-    <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
-  </ul>
-</div>
+  <style>
+    .catalog-item {
+      transition: box-shadow 250ms ease;
+    }
+  
+    .catalog-item:hover,
+    .catalog-item:focus {
+      box-shadow:
+        0 1px 3px 0 rgba(0, 0, 0, 0.12),
+        0 1px 1px 0 rgba(0, 0, 0, 0.14),
+        0 2px 1px 0 rgba(0, 0, 0, 0.20);
+    }
+  </style>
 
-<div class="mobile-overlay"></div>
+</head>
 
-        >
-        <nav class="header-navigation header-nav">
-          <ul class="header-list">
-            <li class="header-item">
-              <a class="header-link" href="index.html">Студія</a>
-            </li>
-            <li class="header-item">
-              <a class="header-link" href="index.html">Портфоліо</a>
-            </li>
-            <li class="header-item">
-              <a class="header-link" href="#">Контакти</a>
-            </li>
+<body>
+  <header class="header">
+    <div class="container header-wrap">
+      <a href="./index.html" class="header-logo">Web<span class="logo-accent">Studio</span></a>
+      <button class="mobile-menu-button" type="button" aria-label="Відкрити меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="mobile-menu">
+        <nav class="mobile-menu-nav" aria-label="Мобільна навігація">
+          <ul>
+            <li><a href="./index.html">Студія</a></li>
+            <li><a href="./portfolio.html">Портфоліо</a></li>
+            <li><a href="#">Контакти</a></li>
           </ul>
         </nav>
-        <address class="header-contacts">
-          <ul class="header-contacts-list">
-            <li class="header-mail">
-              <a class="header-item" href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="header-phone">
-              <a class="header-item" href="tel:+380961111111"
-                >+38 096 111 11 11</a
-              >
-            </li>
-          </ul>
+
+        <address class="mobile-menu-contacts">
+          <a class="mobile-menu-phone" href="tel:+380961111111">+38 096 111 11 11</a>
+          <a class="mobile-menu-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
         </address>
+
+        <ul class="mobile-menu-socials">
+          <li><a href="#" aria-label="Instagram">Instagram</a></li>
+          <li><a href="#" aria-label="Twitter">Twitter</a></li>
+          <li><a href="#" aria-label="Facebook">Facebook</a></li>
+          <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+        </ul>
       </div>
-    </header>
-    <main>
-      <section class="tabs">
-        <div class="container">
-          <nav class="tabs-tab">
-            <button type="button" class="tabs-active">Усі</button>
-            <button type="button" class="tabs-item">Веб-сайти</button>
-            <button type="button" class="tabs-item">Додатки</button>
-            <button type="button" class="tabs-item">Дизайн</button>
-            <button type="button" class="tabs-item">Маркетинг</button>
-          </nav>
-        </div>
-      </section>
-      <section class="catalog">
-        <div class="container">
-          <ul class="catalog-list">
-            <li class="catalog-item">
-              <a href="#" class="catalog-link">
-                <div class="wrapper">
-                  <img
-                  width="370"
-                  class="catalog-img"
-                  src="projects-photos/portfolioimg1.jpg"
-                  alt="Технокряк"
-                />
-                <p class="over">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
-                </div>
-                <div class="catalog-content">
-                  <h3 class="catalog-title">Технокряк</h3>
-                  <p class="catalog-text">Веб-сайт</p>
-                </div>
-              </a>
-            </li>
-            <li class="catalog-item">
-              <a href="#" class="catalog-link">
-                <div class="wrapper">
-                  <img
-                  width="370"
-                  class="catalog-img"
-                  src="projects-photos/portfolioimg2.jpg"
-                  alt="Технокряк"
-                />
-                <p class="over">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
-                </div>
-                <div class="catalog-content">
-                  <h3 class="catalog-title">
-                    Постер New Orlean vs Golden Star
-                  </h3>
-                  <p class="catalog-text">Дизайн</p>
-                </div>
-              </a>
-            </li>
-            <li class="catalog-item">
-              <a href="#" class="catalog-link">
-                <div class="wrapper">
-                  <img
-                  width="370"
-                  class="catalog-img"
-                  src="projects-photos/portfolioimg3.jpg"
-                  alt="Технокряк"
-                />
-                <p class="over">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
-                </div>
-                <div class="catalog-content">
-                  <h3 class="catalog-title">Ресторан Seafood</h3>
-                  <p class="catalog-text">Додаток</p>
-                </div>
-              </a>
-            </li>
 
-            <li class="catalog-item">
-              <a href="#" class="catalog-link">
-                <div class="wrapper">
-                  <img
-                  width="370"
-                  class="catalog-img"
-                  src="projects-photos/portfolioimg4.jpg"
-                  alt="Технокряк"
-                />
-                <p class="over">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
-                </div>
-                <div class="catalog-content">
-                  <h3 class="catalog-title">Проєкт Prime</h3>
-                  <p class="catalog-text">Маркетинг</p>
-                </div>
-              </a>
-            </li>
-            <li class="catalog-item">
-              <a href="#" class="catalog-link">
-                <div class="wrapper">
-                  <img
-                  width="370"
-                  class="catalog-img"
-                  src="projects-photos/portfolioimg5.jpg"
-                  alt="Технокряк"
-                />
-                <p class="over">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
-                </div>
-                <div class="catalog-content">
-                  <h3 class="catalog-title">Проєкт Boxes</h3>
-                  <p class="catalog-text">Додаток</p>
-                </div>
-              </a>
-            </li>
-            <li class="catalog-item">
-              <a href="#" class="catalog-link">
-                <div class="wrapper">
-                  <img
-                  width="370"
-                  class="catalog-img"
-                  src="projects-photos/portfolioimg6.jpg"
-                  alt="Технокряк"
-                />
-                <p class="over">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
-                </div>
-                <div class="catalog-content">
-                  <h3 class="catalog-title">Inspiration has no Borders</h3>
-                  <p class="catalog-text">Веб-сайт</p>
-                </div>
-              </a>
-            </li>
+      <div class="mobile-overlay"></div>
 
-            <li class="catalog-item">
-              <a href="#" class="catalog-link">
-                <div class="wrapper">
-                  <img
-                  width="370"
-                  class="catalog-img"
-                  src="projects-photos/portfolioimg7.jpg"
-                  alt="Технокряк"
-                />
-                <p class="over">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
-                </div>
-                <div class="catalog-content">
-                  <h3 class="catalog-title">Видання Limited Edition</h3>
-                  <p class="catalog-text">Дизайн</p>
-                </div>
-              </a>
-            </li>
-            <li class="catalog-item">
-              <a href="#" class="catalog-link">
-                <div class="wrapper">
-                  <img
-                  width="370"
-                  class="catalog-img"
-                  src="projects-photos/portfolioimg8.jpg"
-                  alt="Технокряк"
-                />
-                <p class="over">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
-                </div>
-                <div class="catalog-content">
-                  <h3 class="catalog-title">Проєкт LAB</h3>
-                  <p class="catalog-text">Маркетинг</p>
-                </div>
-              </a>
-            </li>
-            <li class="catalog-item">
-              <a href="#" class="catalog-link">
-                <div class="wrapper">
-                  <img
-                  width="370"
-                  class="catalog-img"
-                  src="projects-photos/portfolioimg9.jpg"
-                  alt="Технокряк"
-                />
-                <p class="over">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
-                </div>
-                <div class="catalog-content">
-                  <h3 class="catalog-title">Growing Business</h3>
-                  <p class="catalog-text">Додаток</p>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
+      >
+      <nav class="header-navigation header-nav">
+        <ul class="header-list">
+          <li class="header-item">
+            <a class="header-link" href="index.html">Студія</a>
+          </li>
+          <li class="header-item">
+            <a class="header-link" href="index.html">Портфоліо</a>
+          </li>
+          <li class="header-item">
+            <a class="header-link" href="#">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+      <address class="header-contacts">
+        <ul class="header-contacts-list">
+          <li class="header-mail">
+            <a class="header-item" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+          <li class="header-phone">
+            <a class="header-item" href="tel:+380961111111">+38 096 111 11 11</a>
+          </li>
+        </ul>
+      </address>
+    </div>
+  </header>
+  <main>
+    <section class="tabs">
       <div class="container">
-        <a href="index.html" class="footer-logo">Web<span class="footerlogo-accent">Studio</span></a>
-        <address class="footer-address">
-          <ul class="footer-list">
-            <li class="footer-item">
-              <a
-                class="footer-map"
-                target="_blank"
-                href="https://www.google.com/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0,+02000/@50.4265841,30.5358109,17z/data=!3m1!4b1!4m6!3m5!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858!16s%2Fg%2F1tctq5jv?authuser=0&entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D"
-                >м. Київ, пр-т Лесі Українки, 26</a
-              >
-            </li>
-            <li class="footer-item">
-              <a class="footer-mail" href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="footer-item">
-              <a class="footer-phone" href="tel:+380961111111"
-                >+38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </address>
+        <nav class="tabs-tab">
+          <button type="button" class="tabs-active">Усі</button>
+          <button type="button" class="tabs-item">Веб-сайти</button>
+          <button type="button" class="tabs-item">Додатки</button>
+          <button type="button" class="tabs-item">Дизайн</button>
+          <button type="button" class="tabs-item">Маркетинг</button>
+        </nav>
       </div>
-    </footer>
-    <script src="./js/mobile-menu.js"></script>
-  </body>
+    </section>
+    <section class="catalog">
+      <div class="container">
+        <ul class="catalog-list">
+          <li class="catalog-item">
+            <a href="#" class="catalog-link">
+              <div class="wrapper">
+                <img width="370" class="catalog-img" src="projects-photos/portfolioimg1.jpg" alt="Технокряк" />
+                <p class="over">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
+                  дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+              </div>
+              <div class="catalog-content">
+                <h3 class="catalog-title">Технокряк</h3>
+                <p class="catalog-text">Веб-сайт</p>
+              </div>
+            </a>
+          </li>
+          <li class="catalog-item">
+            <a href="#" class="catalog-link">
+              <div class="wrapper">
+                <img width="370" class="catalog-img" src="projects-photos/portfolioimg2.jpg" alt="Технокряк" />
+                <p class="over">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
+                  дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+              </div>
+              <div class="catalog-content">
+                <h3 class="catalog-title">
+                  Постер New Orlean vs Golden Star
+                </h3>
+                <p class="catalog-text">Дизайн</p>
+              </div>
+            </a>
+          </li>
+          <li class="catalog-item">
+            <a href="#" class="catalog-link">
+              <div class="wrapper">
+                <img width="370" class="catalog-img" src="projects-photos/portfolioimg3.jpg" alt="Технокряк" />
+                <p class="over">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
+                  дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+              </div>
+              <div class="catalog-content">
+                <h3 class="catalog-title">Ресторан Seafood</h3>
+                <p class="catalog-text">Додаток</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="catalog-item">
+            <a href="#" class="catalog-link">
+              <div class="wrapper">
+                <img width="370" class="catalog-img" src="projects-photos/portfolioimg4.jpg" alt="Технокряк" />
+                <p class="over">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
+                  дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+              </div>
+              <div class="catalog-content">
+                <h3 class="catalog-title">Проєкт Prime</h3>
+                <p class="catalog-text">Маркетинг</p>
+              </div>
+            </a>
+          </li>
+          <li class="catalog-item">
+            <a href="#" class="catalog-link">
+              <div class="wrapper">
+                <img width="370" class="catalog-img" src="projects-photos/portfolioimg5.jpg" alt="Технокряк" />
+                <p class="over">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
+                  дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+              </div>
+              <div class="catalog-content">
+                <h3 class="catalog-title">Проєкт Boxes</h3>
+                <p class="catalog-text">Додаток</p>
+              </div>
+            </a>
+          </li>
+          <li class="catalog-item">
+            <a href="#" class="catalog-link">
+              <div class="wrapper">
+                <img width="370" class="catalog-img" src="projects-photos/portfolioimg6.jpg" alt="Технокряк" />
+                <p class="over">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
+                  дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+              </div>
+              <div class="catalog-content">
+                <h3 class="catalog-title">Inspiration has no Borders</h3>
+                <p class="catalog-text">Веб-сайт</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="catalog-item">
+            <a href="#" class="catalog-link">
+              <div class="wrapper">
+                <img width="370" class="catalog-img" src="projects-photos/portfolioimg7.jpg" alt="Технокряк" />
+                <p class="over">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
+                  дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+              </div>
+              <div class="catalog-content">
+                <h3 class="catalog-title">Видання Limited Edition</h3>
+                <p class="catalog-text">Дизайн</p>
+              </div>
+            </a>
+          </li>
+          <li class="catalog-item">
+            <a href="#" class="catalog-link">
+              <div class="wrapper">
+                <img width="370" class="catalog-img" src="projects-photos/portfolioimg8.jpg" alt="Технокряк" />
+                <p class="over">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
+                  дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+              </div>
+              <div class="catalog-content">
+                <h3 class="catalog-title">Проєкт LAB</h3>
+                <p class="catalog-text">Маркетинг</p>
+              </div>
+            </a>
+          </li>
+          <li class="catalog-item">
+            <a href="#" class="catalog-link">
+              <div class="wrapper">
+                <img width="370" class="catalog-img" src="projects-photos/portfolioimg9.jpg" alt="Технокряк" />
+                <p class="over">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
+                  дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+              </div>
+              <div class="catalog-content">
+                <h3 class="catalog-title">Growing Business</h3>
+                <p class="catalog-text">Додаток</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <a href="index.html" class="footer-logo">Web<span class="footerlogo-accent">Studio</span></a>
+      <address class="footer-address">
+        <ul class="footer-list">
+          <li class="footer-item">
+            <a class="footer-map" target="_blank"
+              href="https://www.google.com/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0,+02000/@50.4265841,30.5358109,17z/data=!3m1!4b1!4m6!3m5!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858!16s%2Fg%2F1tctq5jv?authuser=0&entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D">м.
+              Київ, пр-т Лесі Українки, 26</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-phone" href="tel:+380961111111">+38 096 111 11 11</a>
+          </li>
+        </ul>
+      </address>
+    </div>
+  </footer>
+  <script src="./js/mobile-menu.js"></script>
+</body>
+
 </html>

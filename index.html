@@ -1,271 +1,436 @@
-<!doctype html>
-<html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WebStudio</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
-      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  
-    <style>
-      .hero {
-        background-image:
-          linear-gradient(
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)
-          ),
-          url("./img/Шапка.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-      }
+<!DOCTYPE html>
+<html lang="en">
 
-      .team-list {
-        box-shadow:
-          0 1px 3px 0 rgba(0, 0, 0, 0.12),
-          0 1px 1px 0 rgba(0, 0, 0, 0.14),
-          0 2px 1px 0 rgba(0, 0, 0, 0.20);
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      .hero-button {
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-      }
-    </style>
+  <title>Portfolio</title>
 
-  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <body>
-    <header class="header">
-      <div class="container header-wrap">
-        <a href="./index.html" class="header-logo">Web<span class="logo-accent">Studio</span></a>
-<button class="mobile-menu-button" type="button" aria-label="Відкрити меню" aria-expanded="false">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
-<div class="mobile-menu">
-  <nav class="mobile-menu-nav" aria-label="Мобільна навігація">
-    <ul>
-      <li><a href="./index.html">Студія</a></li>
-      <li><a href="./portfolio.html">Портфоліо</a></li>
-      <li><a href="#">Контакти</a></li>
-    </ul>
-  </nav>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+    integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
 
-  <address class="mobile-menu-contacts">
-    <a class="mobile-menu-phone" href="tel:+380961111111">+38 096 111 11 11</a>
-    <a class="mobile-menu-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
-  </address>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/portfolio.css">
 
-  <ul class="mobile-menu-socials">
-    <li><a href="#" aria-label="Instagram">Instagram</a></li>
-    <li><a href="#" aria-label="Twitter">Twitter</a></li>
-    <li><a href="#" aria-label="Facebook">Facebook</a></li>
-    <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
-  </ul>
-</div>
+  <style>
+    .portfolio-item {
+      transition: box-shadow 250ms ease;
+    }
 
-<div class="mobile-overlay"></div>
+    .portfolio-item:hover,
+    .portfolio-item:focus {
+      box-shadow:
+        0 1px 3px 0 rgba(0, 0, 0, 0.12),
+        0 1px 1px 0 rgba(0, 0, 0, 0.14),
+        0 2px 1px 0 rgba(0, 0, 0, 0.20);
+    }
+  </style>
 
-        <nav class="header-nav">
-          <ul class="header-list">
-            <li class="header-item">
-              <a class="header-link" href="./index.html">Студія</a>
-            </li>
-            <li class="header-item">
-              <a class="header-link" href="portfolio.html">Портфоліо</a>
-            </li>
-            <li class="header-item">
-              <a class="header-link" href="#">Контакти</a>
-            </li>
-          </ul>
-        </nav>
-        <address class="header-contacts">
-          <ul class="header-contacts-list">
-            <li class="header-mail">
-              <a class="header-item" href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="header-phone">
-              <a class="header-item" href="tel:+380961111111"
-                >+38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </address>
+</head>
+
+<body>
+
+  <header class="header">
+
+    <div class="container">
+
+      <a class="header-logo" href="./index.html">
+        <span class="header-logo-blue">Web</span>Studio
+      </a>
+
+      <nav class="header-navigation">
+
+        <ul class="header-list">
+
+          <li class="header-item">
+            <a class="header-link" href="./index.html">
+              Студія
+            </a>
+          </li>
+
+          <li class="header-item">
+            <a class="header-link" href="./portfolio.html">
+              Портфоліо
+            </a>
+          </li>
+
+          <li class="header-item">
+            <a class="header-link" href="">
+              Контакти
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <ul class="header-contacts">
+
+        <li class="header-contacts-item">
+          <a class="header-contacts-email" href="mailto:info@devstudio.com">
+            info@devstudio.com
+          </a>
+        </li>
+
+        <li class="header-contacts-item">
+          <a class="header-contacts-tel" href="tel:+380961111111">
+            +38 096 111 11 11
+          </a>
+        </li>
+
+      </ul>
+
+      <!-- ДОДАНО ПОСИЛАННЯ -->
+      <ul class="mobile-socials">
+
+        <li>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+            Instagram
+          </a>
+        </li>
+
+        <li>
+          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+            Twitter
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+            Facebook
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </li>
+
+      </ul>
+
+      <button type="button" class="header-menu">
+        <img class="header-mobile" src="./img/menu.png" alt="Відкрити меню">
+      </button>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <section class="fillters">
+
+      <div class="container">
+
+        <ul class="fillters-list">
+
+          <li class="fillters-item">
+            <button class="fillters-button" type="button">
+              Усі
+            </button>
+          </li>
+
+          <li class="fillters-item">
+            <button class="fillters-button" type="button">
+              Веб-сайти
+            </button>
+          </li>
+
+          <li class="fillters-item">
+            <button class="fillters-button" type="button">
+              Додатки
+            </button>
+          </li>
+
+          <li class="fillters-item">
+            <button class="fillters-button" type="button">
+              Дизайн
+            </button>
+          </li>
+
+          <li class="fillters-item">
+            <button class="fillters-button" type="button">
+              Маркетинг
+            </button>
+          </li>
+
+        </ul>
+
       </div>
-    </header>
-    <main>
-      <section id="qwe" class="hero">
-        <div class="container">
-          <h1 class="hero-title">
-            ЕФЕКТИНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ
-          </h1>
-          <button class="hero-button" type="button">Замовити послугу</button>
-        </div>
-      </section>
-      <section class="info">
-        <div class="container">
-          <ul class="info-all">
-            <li class="info-list">
-              <h4 class="info-title">УВАГА ДО ДЕТАЛЕЙ</h4>
-              <p class="info-text">
-                Ідейні міркування, і навіть початок повсякденної роботи з
-                формування позиції.
-              </p>
-            </li>
-            <li class="info-list">
-              <h4 class="info-title">ПУНКТУАЛЬНІСТЬ</h4>
-              <p class="info-text">
-                Завдання організації, особливо рамки і місце навчання кадрів
-                тягне у себе.
-              </p>
-            </li>
-            <li class="info-list">
-              <h4 class="info-title">ПЛАНУВАННЯ</h4>
-              <p class="info-text">
-                Так само консультація з широким активом значною мірою зумовлює.
-              </p>
-            </li>
-            <li class="info-list">
-              <h4 class="info-title">СУЧАСНІ ТЕХНОЛОГІЇ</h4>
-              <p class="info-text">
-                Значимість цих проблем настільки очевидна, що реалізація
-                планових завдань.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
 
-      <section class="about">
-        <div class="container">
-          <h2 class="about-title">Чим ми займаємося</h2>
-          <ul class="about-all">
-            <li class="about-list">
-              <img
-                class="about-img"
-                src="img/img1.jpg"
-                alt="Програмування"
-              />
-            </li>
-            <li class="about-list">
-              <img
-                class="about-img"
-                src="img/img2.jpg"
-                alt="Конспект"
-              />
-            </li>
-            <li class="about-list">
-              <img
-                class="about-img"
-                src="img/img3.jpg"
-                alt="Теорія кольору"
-              />
-            </li>
-          </ul>
-        </div>
-      </section>
+    </section>
 
-      <section class="team">
-        <div class="container">
-          <h2 class="team-title">Наша команда</h2>
-          <ul class="team-all">
-            <li class="team-list">
-              <img
-                width="400"
-                class="team-img"
-                src="img/man1.jpg"
-                alt="Ігор Дем'яненко"
-              />
-              <div class="team-content">
-                <h3 class="team-subtitle">Ігор Дем'яненко</h3>
-                <p class="team-text">Product Designer</p>
-              </div>
-            </li>
-            <li class="team-list">
-              <img
-                width="400"
-                class="team-img"
-                src="img/man2.jpg"
-                alt="Ольга Рєпіна"
-              />
-              <div class="team-content">
-                <h3 class="team-subtitle">Ольга Рєпіна</h3>
-                <p class="team-text">Frontend Developer</p>
-              </div>
-            </li>
-            <li class="team-list">
-              <img
-                width="400"
-                class="team-img"
-                src="img/man3.jpg"
-                alt="Микола Тарасов"
-              />
-              <div class="team-content">
-                <h3 class="team-subtitle">Микола Тарасов</h3>
-                <p class="team-text">Marketing</p>
-              </div>
-            </li>
-            <li class="team-list">
-              <img
-                width="400"
-                class="team-img"
-                src="img/man4.jpg"
-                alt="Михайло Єрмаков"
-              />
-              <div class="team-content">
-                <h3 class="team-subtitle">Михайло Єрмаков</h3>
-                <p class="team-text">UI Designer</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="footer-all container">
-        <a href="./index.html" class="footer-logo">Web<span class="footerlogo-accent">Studio</span></a>
-        <address class="footer-address">
-          <ul class="footer-list">
-            <li class="footer-item">
-              <a
-                class="footer-map"
-                target="_blank"
-                href="https://www.google.com/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0,+02000/@50.4265841,30.5358109,17z/data=!3m1!4b1!4m6!3m5!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858!16s%2Fg%2F1tctq5jv?authuser=0&entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D"
-                >м. Київ, пр-т Лесі Українки, 26</a
-              >
-            </li>
-            <li class="footer-item">
-              <a class="footer-mail" href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="footer-item">
-              <a class="footer-phone" href="tel:+380961111111"
-                >+38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </address>
+    <section class="portfolio">
+
+      <div class="container">
+
+        <ul class="portfolio-list">
+
+          <li class="portfolio-item">
+
+            <div class="wrapper">
+              <img class="portfolio-img" src="./images/Технокряк.png" alt="">
+
+              <p class="over">
+                Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+                відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+
+            <div class="wrap">
+              <h3 class="portfolio-title">
+                Технокряк
+              </h3>
+
+              <p class="portfolio-text">
+                Веб-сайт
+              </p>
+            </div>
+
+          </li>
+
+          <li class="portfolio-item">
+
+            <div class="wrapper">
+              <img class="portfolio-img" src="./images/ПостерNewOrleanvsGoldenStar.png" alt="">
+
+              <p class="over">
+                Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+                відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+
+            <div class="wrap">
+              <h3 class="portfolio-title">
+                Постер New Orlean vs Golden Star
+              </h3>
+
+              <p class="portfolio-text">
+                Дизайн
+              </p>
+            </div>
+
+          </li>
+
+          <li class="portfolio-item">
+
+            <div class="wrapper">
+              <img class="portfolio-img" src="./images/Ресторан.png" alt="">
+
+              <p class="over">
+                Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+                відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+
+            <div class="wrap">
+              <h3 class="portfolio-title">
+                Ресторан Seafood
+              </h3>
+
+              <p class="portfolio-text">
+                Додаток
+              </p>
+            </div>
+
+          </li>
+
+          <li class="portfolio-item">
+
+            <div class="wrapper">
+              <img class="portfolio-img" src="./images/ПроєктPrime.png" alt="">
+
+              <p class="over">
+                Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+                відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+
+            <div class="wrap">
+              <h3 class="portfolio-title">
+                Проєкт Prime
+              </h3>
+
+              <p class="portfolio-text">
+                Маркетинг
+              </p>
+            </div>
+
+          </li>
+
+          <li class="portfolio-item">
+
+            <div class="wrapper">
+              <img class="portfolio-img" src="./images/Boxes.png" alt="">
+
+              <p class="over">
+                Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+                відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+
+            <div class="wrap">
+              <h3 class="portfolio-title">
+                Проєкт Boxes
+              </h3>
+
+              <p class="portfolio-text">
+                Додаток
+              </p>
+            </div>
+
+          </li>
+
+          <li class="portfolio-item">
+
+            <div class="wrapper">
+              <img class="portfolio-img" src="./images/InspirationHasNoBorders.png" alt="">
+
+              <p class="over">
+                Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+                відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+
+            <div class="wrap">
+              <h3 class="portfolio-title">
+                Inspiration has no Borders
+              </h3>
+
+              <p class="portfolio-text">
+                Веб-сайт
+              </p>
+            </div>
+
+          </li>
+
+          <li class="portfolio-item">
+
+            <div class="wrapper">
+              <img class="portfolio-img" src="./images/LimitedEdition.png" alt="">
+
+              <p class="over">
+                Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+                відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+
+            <div class="wrap">
+              <h3 class="portfolio-title">
+                Видання Limited Edition
+              </h3>
+
+              <p class="portfolio-text">
+                Дизайн
+              </p>
+            </div>
+
+          </li>
+
+          <li class="portfolio-item">
+
+            <div class="wrapper">
+              <img class="portfolio-img" src="./images/Lab.png" alt="">
+
+              <p class="over">
+                Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+                відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+
+            <div class="wrap">
+              <h3 class="portfolio-title">
+                Проєкт LAB
+              </h3>
+
+              <p class="portfolio-text">
+                Маркетинг
+              </p>
+            </div>
+
+          </li>
+
+          <li class="portfolio-item">
+
+            <div class="wrapper">
+              <img class="portfolio-img" src="./images/GrowingBussines.png" alt="">
+
+              <p class="over">
+                Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+                відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+
+            <div class="wrap">
+              <h3 class="portfolio-title">
+                Growing Business
+              </h3>
+
+              <p class="portfolio-text">
+                Додаток
+              </p>
+            </div>
+
+          </li>
+
+        </ul>
+
       </div>
-    </footer>
-    <a class="scroll" href="#qwe"><img class="scroll-icon" src="img/arrow.png" alt="arrow"></a>
-    <script src="./js/mobile-menu.js"></script>
-  </body>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-box">
+
+        <a class="footer-logo" href="./index.html">
+          <span class="footer-logo-blue">Web</span>Studio
+        </a>
+
+        <ul class="contacts">
+
+          <li class="contacts-item">
+            <p class="contacts-address">
+              м. Київ, пр-т Лесі Українки, 26
+            </p>
+          </li>
+
+          <li class="contacts-item">
+            <a class="contacts-email" href="mailto:info@devstudio.com">
+              info@devstudio.com
+            </a>
+          </li>
+
+          <li class="contacts-item">
+            <a class="contacts-tel" href="tel:+380961111111">
+              +38 096 111 11 11
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script src="./mobile-menu.js"></script>
+
+</body>
+
 </html>
