@@ -19,15 +19,68 @@
     />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+  
+    <style>
+      .hero {
+        background-image:
+          linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+          ),
+          url("./img/Шапка.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .team-list {
+        box-shadow:
+          0 1px 3px 0 rgba(0, 0, 0, 0.12),
+          0 1px 1px 0 rgba(0, 0, 0, 0.14),
+          0 2px 1px 0 rgba(0, 0, 0, 0.20);
+      }
+
+      .hero-button {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+      }
+    </style>
+
   </head>
 
   <body>
     <header class="header">
       <div class="container header-wrap">
         <a href="./index.html" class="header-logo">Web<span class="logo-accent">Studio</span></a>
-        <button class="menu-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+<button class="mobile-menu-button" type="button" aria-label="Відкрити меню" aria-expanded="false">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<div class="mobile-menu">
+  <nav class="mobile-menu-nav" aria-label="Мобільна навігація">
+    <ul>
+      <li><a href="./index.html">Студія</a></li>
+      <li><a href="./portfolio.html">Портфоліо</a></li>
+      <li><a href="#">Контакти</a></li>
+    </ul>
+  </nav>
+
+  <address class="mobile-menu-contacts">
+    <a class="mobile-menu-phone" href="tel:+380961111111">+38 096 111 11 11</a>
+    <a class="mobile-menu-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+  </address>
+
+  <ul class="mobile-menu-socials">
+    <li><a href="#" aria-label="Instagram">Instagram</a></li>
+    <li><a href="#" aria-label="Twitter">Twitter</a></li>
+    <li><a href="#" aria-label="Facebook">Facebook</a></li>
+    <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+  </ul>
+</div>
+
+<div class="mobile-overlay"></div>
+
         <nav class="header-nav">
           <ul class="header-list">
             <li class="header-item">
@@ -56,7 +109,6 @@
           </ul>
         </address>
       </div>
-      <div class="overlay" aria-hidden="true"></div>
     </header>
     <main>
       <section id="qwe" class="hero">
@@ -214,6 +266,6 @@
       </div>
     </footer>
     <a class="scroll" href="#qwe"><img class="scroll-icon" src="img/arrow.png" alt="arrow"></a>
-    <script src="js/mobile-menu.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
