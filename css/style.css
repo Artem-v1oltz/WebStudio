@@ -80,9 +80,12 @@ body {
 
 .header-item {
   position: relative;
+  transition: color 250ms ease;
 }
 
-.header-item:hover:after {
+.header-list .header-item:hover::after,
+.header-list .header-item:focus-within::after {
+  width: 100%;
   opacity: 1;
 }
 
@@ -96,17 +99,19 @@ body {
   font-family: Roboto;
 }
 
-.header-item::after {
+.header-list .header-item::after {
   content: "";
   display: block;
-  width: 100%;
+  width: 0;
   height: 4px;
   background: var(--secondary-color);
   position: absolute;
-  left: 0;
+  left: 50%;
   bottom: -35.5px;
   border-radius: 2px;
   opacity: 0;
+  transform: translateX(-50%);
+  transition: width 180ms ease-out, opacity 180ms ease-out;
 }
 
 .header-link {
@@ -118,6 +123,7 @@ body {
   text-decoration: none;
   color: var(--title-color);
   font-family: Roboto;
+  transition: color 250ms ease;
 }
 
 .header-link:hover {
@@ -401,6 +407,7 @@ body {
   letter-spacing: 0.42px;
   text-decoration: none;
   font-style: normal;
+  transition: color 250ms ease;
 }
 
 .footer-map:hover {
@@ -414,6 +421,7 @@ body {
   letter-spacing: 0.42px;
   color: var(--text-color);
   text-decoration: none;
+  transition: color 250ms ease;
 }
 
 .footer-mail:hover {
@@ -428,6 +436,7 @@ body {
   letter-spacing: 0.42px;
   color: var(--text-color);
   text-decoration: none;
+  transition: color 250ms ease;
 }
 
 .footer-phone:hover {
@@ -817,12 +826,6 @@ body {
   }
 }
 
-/* ==========================================================
-   FINAL MOBILE-FIRST ADAPTIVE + MOBILE MENU
-   Breakpoints: 480px / 768px / 1200px
-   ========================================================== */
-
-/* Prevent horizontal overflow */
 html,
 body {
   width: 100%;
@@ -835,14 +838,11 @@ img {
   height: auto;
 }
 
-/* Mobile menu button/panel are hidden on desktop by default */
 .mobile-menu-button,
 .mobile-menu,
 .mobile-overlay {
   display: none;
 }
-
-/* ---------- BASE: mobile first ---------- */
 
 .container {
   width: 100%;
@@ -859,7 +859,6 @@ img {
 }
 
 .header-wrap {
-  min-height: 60px;
   align-items: center;
   position: relative;
 }
@@ -952,6 +951,7 @@ img {
   font-weight: 500;
   line-height: 1.18;
   text-decoration: none;
+  transition: color 250ms ease;
 }
 
 .mobile-menu-nav a:hover,
@@ -1062,10 +1062,6 @@ body.menu-open {
     display: none !important;
   }
 
-  .header-wrap {
-    min-height: 80px;
-  }
-
   .header-nav,
   .header-navigation {
     display: flex;
@@ -1086,10 +1082,6 @@ body.menu-open {
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
-  }
-
-  .header-wrap {
-    min-height: 80px;
   }
 
   .header-logo {
@@ -1148,7 +1140,6 @@ body.menu-open {
   }
 }
 
-/* Portfolio 768px */
 @media (min-width: 768px) {
   .tabs {
     padding-top: 80px;

@@ -65,6 +65,7 @@ body.no-scroll { overflow: hidden; }
   line-height: 1.18;
   letter-spacing: .8px;
   text-decoration: none;
+  transition: color .25s ease;
 }
 .mobile-menu-link:hover,
 .mobile-menu-link:focus { color: #2196f3; }
