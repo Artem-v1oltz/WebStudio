@@ -153,6 +153,10 @@ body {
 
 .hero {
   background-color: var(--BG1-color);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/gradient.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding-top: 118px;
   padding-bottom: 118px;
   text-align: center;
@@ -196,7 +200,7 @@ body {
   padding: 10px 32px;
   border-radius: 4px;
   background: var(--secondary-color);
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: none;
   color: var(--primary-color);
   text-align: center;
   font-size: 16px;
@@ -204,10 +208,17 @@ body {
   line-height: 1.87;
   letter-spacing: 0.96px;
   border: none;
+  cursor: pointer;
+  transition: box-shadow 250ms ease;
 
   animation-name: hero-button;
   animation-duration: 1000ms;
   animation-timing-function: ease-out;
+}
+
+.hero-button:hover,
+.hero-button:focus-visible {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 
 @keyframes hero-button {
@@ -304,6 +315,12 @@ body {
   background-color: var(--primary-color);
   text-align: center;
   padding-bottom: 30px;
+  transition: box-shadow 250ms ease;
+}
+
+.team-list:hover,
+.team-list:focus-within {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 .team-img {
