@@ -145,6 +145,25 @@ body {
   display: flex;
 }
 
+.header-contacts-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #212121;
+  text-decoration: none;
+  transition: color 250ms ease;
+}
+
+.header-contacts-link:hover,
+.header-contacts-link:focus {
+  color: var(--secondary-color);
+}
+
+.header-icons {
+  fill: currentColor;
+  transition: fill 250ms ease;
+}
+
 .header-item:hover {
   color: var(--secondary-color);
 }
@@ -366,6 +385,96 @@ body {
   letter-spacing: 0.48px;
 }
 
+.team-social-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.team-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #afb1b8;
+  transition: color 250ms ease, background-color 250ms ease;
+}
+
+.team-social-link svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+  color: #fff;
+  background-color: var(--secondary-color);
+}
+
+/* clients */
+
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: var(--primary-color);
+}
+
+.clients-title {
+  color: var(--title-color);
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: 1.08px;
+  margin-bottom: 50px;
+}
+
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.clients-list li {
+  width: 170px;
+  height: 92px;
+}
+
+.clients-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: #afb1b8;
+  transition: border-color 250ms ease, color 250ms ease;
+}
+
+.clients-link svg {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
 /* footer */
 
 .footer {
@@ -374,9 +483,16 @@ body {
   background-color: var(--BG1-color);
 }
 
-.footer-all {
+.footer-box {
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-info {
+  width: 270px;
 }
 
 .footer-logo {
@@ -443,6 +559,108 @@ body {
 
 .footer-phone:hover {
   color: var(--secondary-color);
+}
+
+/* footer social */
+
+.footer-social-title {
+  color: var(--primary-color);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  margin: 0 0 20px;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-social-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  transition: background-color 250ms ease, color 250ms ease;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--secondary-color);
+}
+
+.footer-social-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* footer subscribe */
+
+.footer-subscribe {
+  width: 570px;
+  max-width: 100%;
+}
+
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.subscribe-input {
+  width: 358px;
+  max-width: 100%;
+  height: 50px;
+  padding: 0 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--primary-color);
+  outline: none;
+}
+
+.subscribe-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-input:focus {
+  border-color: var(--secondary-color);
+}
+
+.subscribe-button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.87;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 250ms ease;
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus {
+  background-color: #188ce8;
+}
+
+.subscribe-icon {
+  font-size: 20px;
 }
 
 .scroll {
