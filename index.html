@@ -22,6 +22,75 @@
   
   </head>
 
+
+
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+  
+      <button class="modal-close" type="button" data-modal-close>
+        &times;
+      </button>
+  
+      <h2 class="modal-title">
+        Залиште свої дані, ми вам передзвонимо
+      </h2>
+  
+      <form class="modal-form">
+  
+        <label class="modal-label">
+          Ім'я
+          <span class="modal-input-wrap">
+            <input class="modal-input" type="text" name="name" required>
+            <svg class="modal-icon">
+              <use href="./img/symbol-defs.svg#person"></use>
+            </svg>
+          </span>
+        </label>
+  
+        <label class="modal-label">
+          Телефон
+          <span class="modal-input-wrap">
+            <input class="modal-input" type="tel" name="tel" required>
+            <svg class="modal-icon">
+              <use href="./img/symbol-defs.svg#phone"></use>
+            </svg>
+          </span>
+        </label>
+  
+        <label class="modal-label">
+          Пошта
+          <span class="modal-input-wrap">
+            <input class="modal-input" type="email" name="email" required>
+            <svg class="modal-icon">
+              <use href="./img/symbol-defs.svg#email"></use>
+            </svg>
+          </span>
+        </label>
+  
+        <label class="modal-label">
+          Коментар
+          <textarea class="modal-textarea" name="comment" placeholder="Введіть текст"></textarea>
+        </label>
+  
+        <label class="modal-checkbox-label">
+          <input class="modal-checkbox" type="checkbox" required>
+  
+          <span class="modal-checkbox-text">
+            Погоджуюся з розсилкою та приймаю
+            <a href="#">Умови договору</a>
+          </span>
+        </label>
+  
+        <button class="modal-submit" type="submit">
+          Відправити
+        </button>
+  
+      </form>
+    </div>
+  </div>
+
+
+
   <body>
     <header class="header">
       <div class="container header-wrap">
