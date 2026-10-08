@@ -1,0 +1,148 @@
+@use "../base/variables" as *;
+
+@use "../utils/mixin" as *;
+@use "../utils/placeholder" as *;
+
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: fixed;
+  width: 100%;
+  background: $color-primary;
+  border-bottom: 1px solid $color-border;
+}
+
+.header-wrap {
+  @include flex-center;
+}
+
+.header-logo {
+  font-family: Raleway;
+  color: $color-accent;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.38;
+  letter-spacing: 0.78px;
+  text-decoration: none;
+  margin-right: 93px;
+
+  animation-name: header-logo;
+  animation-duration: 3000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease;
+}
+
+@keyframes header-logo {
+  0% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.logo-accent {
+  color: $color-logo;
+}
+
+.header-nav {
+  display: none;
+}
+
+.header-list {
+  @extend %list-reset;
+  align-items: center;
+  display: flex;
+  gap: 50px;
+}
+
+.header-item {
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.28px;
+  text-decoration: none;
+  font-family: Roboto;
+  color: $color-text;
+  transition: color 250ms ease;
+
+  &:hover {
+    color: $color-accent;
+  }
+
+  .header-list &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 4px;
+    background: $color-accent;
+    position: absolute;
+    left: 50%;
+    bottom: -35.5px;
+    border-radius: 2px;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: width 180ms ease-out, opacity 180ms ease-out;
+  }
+
+  .header-list &:hover::after,
+  .header-list &:focus-within::after {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.header-link {
+  color: $color-title;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.28px;
+  text-decoration: none;
+  font-family: Roboto;
+  transition: color 250ms ease;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+.header-contacts {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.28px;
+  color: #212121;
+  font-family: Roboto;
+  text-decoration: none;
+  display: none;
+  gap: 24px;
+  margin-left: auto;
+  font-style: normal;
+}
+
+.header-contacts-list {
+  align-items: center;
+  display: flex;
+}
+
+.header-contacts-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #212121;
+  text-decoration: none;
+  transition: color 250ms ease;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}
+
+.header-icons {
+  fill: currentColor;
+  transition: fill 250ms ease;
+}

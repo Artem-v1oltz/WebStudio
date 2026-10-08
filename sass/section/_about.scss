@@ -1,0 +1,31 @@
+@use "../base/variables" as *;
+
+/* about */
+
+.about {
+  padding-bottom: 94px;
+  display: none;
+
+  &-title {
+    color: $color-title;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.16;
+    letter-spacing: 1.08px;
+    margin-bottom: 50px;
+  }
+
+  &-all {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    max-width: 1170px;
+  }
+
+  &-img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

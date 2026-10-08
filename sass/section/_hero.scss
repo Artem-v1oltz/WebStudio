@@ -1,0 +1,84 @@
+@use "../base/variables" as *;
+
+/* hero */
+
+.hero {
+  background-color: $color-bg-dark;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/gradient.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  text-align: center;
+
+  &-title {
+    color: $color-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.62;
+    letter-spacing: 1.56px;
+    text-transform: uppercase;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+    animation-name: hero-title;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-out;
+  }
+
+  &-button {
+    min-width: 200px;
+    height: 50px;
+    padding: 10px 32px;
+    border-radius: 4px;
+    background: $color-accent;
+    box-shadow: none;
+    color: $color-primary;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.87;
+    letter-spacing: 0.96px;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 250ms ease;
+
+    animation-name: hero-button;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-out;
+
+    &:hover,
+    &:focus-visible {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+}
+
+@keyframes hero-title {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hero-button {
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
