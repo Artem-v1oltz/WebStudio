@@ -4,13 +4,33 @@
 
 .hero {
   background-color: $color-bg-dark;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/gradient.png");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/adaptive/mobile/hero-mobile@1x.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   padding-top: 118px;
   padding-bottom: 118px;
   text-align: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/adaptive/mobile/hero-mobile@2x.webp");
+  }
+
+  @media (min-width: 768px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/adaptive/tablet/hero-tablet@1x.webp");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/adaptive/tablet/hero-tablet@2x.webp");
+    }
+  }
+
+  @media (min-width: 1200px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/adaptive/desktop/hero-destop@1x.webp");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/adaptive/desktop/hero-destop@2x.webp");
+    }
+  }
 
   &-title {
     color: $color-primary;

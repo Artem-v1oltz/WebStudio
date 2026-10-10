@@ -163,25 +163,29 @@
 }
 
 @media (max-width: 479px) {
-  .tabs-tab {
-    justify-content: flex-start;
+  .tabs {
+    &-tab {
+      justify-content: flex-start;
+    }
+
+    &-item,
+    &-active {
+      padding: 6px 12px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
   }
 
-  .tabs-item,
-  .tabs-active {
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.5;
-  }
+  .catalog {
+    &-content {
+      padding: 16px;
+    }
 
-  .over {
-    padding: 16px;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-
-  .catalog-content {
-    padding: 16px;
+    .over {
+      padding: 16px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
   }
 }
 
@@ -191,8 +195,10 @@
     padding-bottom: 40px;
   }
 
-  .catalog-list {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+  .catalog {
+    &-list {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
   }
 }
 
@@ -202,13 +208,15 @@
     padding-bottom: 40px;
   }
 
-  .catalog-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px;
-  }
+  .catalog {
+    &-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 30px;
+    }
 
-  .catalog-content {
-    min-height: 110px;
+    &-content {
+      min-height: 110px;
+    }
   }
 }
 
@@ -220,9 +228,9 @@
 
   .catalog {
     padding-bottom: 94px;
-  }
 
-  .catalog-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    &-list {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
   }
 }
