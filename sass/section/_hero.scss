@@ -1,104 +1,110 @@
-@use "../base/variables" as *;
-
-/* hero */
 
 .hero {
-  background-color: $color-bg-dark;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/adaptive/mobile/hero-mobile@1x.webp");
-  background-repeat: no-repeat;
-  background-position: center;
+  padding: 118px 0;
+  background-image:
+    linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../pages/mobile/hero-mobile@1x.webp);
   background-size: cover;
-  padding-top: 118px;
-  padding-bottom: 118px;
-  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
 
-  @media (min-resolution: 2dppx) {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/adaptive/mobile/hero-mobile@2x.webp");
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image:
+      linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../pages/mobile/hero-mobile@2x.webp);
   }
 
   @media (min-width: 768px) {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/adaptive/tablet/hero-tablet@1x.webp");
+    background-image:
+      linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../pages/tablet/hero-tablet@1x.webp);
 
-    @media (min-resolution: 2dppx) {
-      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/adaptive/tablet/hero-tablet@2x.webp");
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../pages/tablet/hero-tablet@2x.webp);
     }
   }
 
   @media (min-width: 1200px) {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/adaptive/desktop/hero-destop@1x.webp");
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image:
+      linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../pages/dekstop/hero-destop@1x.webp);
 
-    @media (min-resolution: 2dppx) {
-      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/adaptive/desktop/hero-destop@2x.webp");
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../pages/dekstop/hero-destop@2x.webp);
     }
   }
 
   &-title {
-    color: $color-primary;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    color: var(--only-color);
     text-align: center;
     font-size: 26px;
+    line-height: 1.36;
     font-weight: 900;
-    line-height: 1.62;
     letter-spacing: 1.56px;
     text-transform: uppercase;
-    width: 100%;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
+    animation: heroTitle 1s ease;
 
-    animation-name: hero-title;
-    animation-duration: 1000ms;
-    animation-timing-function: ease-out;
+    @media (min-width: 768px) {
+      width: 360px;
+      height: 84px;
+      margin: 0 auto 30px;
+    }
+
+    @media (min-width: 1200px) {
+      width: 696px;
+      height: 120px;
+      margin: 0 auto 30px;
+      font-size: 44px;
+      line-height: 1.36;
+      letter-spacing: 2.64px;
+    }
   }
 
   &-button {
-    min-width: 200px;
-    height: 50px;
+    width: 216px;
     padding: 10px 32px;
-    border-radius: 4px;
-    background: $color-accent;
-    box-shadow: none;
-    color: $color-primary;
+    color: var(--only-color);
     text-align: center;
     font-size: 16px;
-    font-weight: 700;
-    line-height: 1.87;
+    line-height: 30px;
     letter-spacing: 0.96px;
-    border: none;
-    cursor: pointer;
-    transition: box-shadow 250ms ease;
+    border-radius: 4px;
+    background: linear-gradient(180deg, #2196f3 0%, #188ce8 100%);
+    box-shadow:
+      0 4px 4px rgba(0, 0, 0, 0.15),
+      0 2px 8px rgba(33, 150, 243, 0.2);
+  }
 
-    animation-name: hero-button;
-    animation-duration: 1000ms;
-    animation-timing-function: ease-out;
-
-    &:hover,
-    &:focus-visible {
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    }
+  .btn-div {
+    display: flex;
+    justify-content: center;
   }
 }
 
-@keyframes hero-title {
+@keyframes heroTitle {
   0% {
     opacity: 0;
-    transform: translateX(-150px);
+    transform: translateY(-50px);
   }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 
-@keyframes hero-button {
-  0% {
-    opacity: 0;
-    transform: translateX(150px);
-  }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }

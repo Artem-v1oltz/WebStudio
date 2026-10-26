@@ -1,208 +1,416 @@
-@use "../base/variables" as *;
-
-/* footer */
 
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: $color-bg-dark;
-}
+  width: 100%;
+  background-color: #2f303a;
+  padding: 60px 0 40px;
+  overflow: hidden;
 
-.footer-box {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.footer-info {
-  width: 270px;
-}
-
-.footer-logo {
-  display: inline-block;
-  margin-bottom: 20px;
-  color: $color-accent;
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 1.19;
-  letter-spacing: 0.78px;
-  text-decoration: none;
-  font-family: Raleway;
-}
-
-.footerlogo-accent {
-  color: $color-bg-light;
-}
-
-.footer-list {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-}
-
-.footer-map {
-  color: $color-primary;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.71;
-  letter-spacing: 0.42px;
-  text-decoration: none;
-  font-style: normal;
-  transition: color 250ms ease;
-
-  &:hover {
-    color: $color-accent;
+  & .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
   }
-}
 
-.footer-mail {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.71;
-  letter-spacing: 0.42px;
-  color: $color-text;
-  text-decoration: none;
-  transition: color 250ms ease;
-
-  &:hover {
-    color: $color-accent;
+  &-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-}
 
-.footer-phone {
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.71;
-  letter-spacing: 0.42px;
-  color: $color-text;
-  text-decoration: none;
-  transition: color 250ms ease;
-
-  &:hover {
-    color: $color-accent;
+  &-logo-wrap {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
   }
-}
 
-/* footer social */
-
-.footer-social-title {
-  color: $color-primary;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.14;
-  margin: 0 0 20px;
-}
-
-.footer-social-list {
-  display: flex;
-  gap: 10px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-social-link {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: $color-primary;
-  transition: background-color 250ms ease, color 250ms ease;
-
-  &:hover,
-  &:focus {
-    background-color: $color-accent;
+  &-logo {
+    display: inline-block;
+    color: #fff;
+    font-family: Raleway, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.72px;
   }
-}
 
-.footer-social-icon {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
+  &-span {
+    color: #2196f3;
+  }
 
-/* footer subscribe */
+  &-list {
+    width: 100%;
+    margin: 0 0 50px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    list-style: none;
 
-.footer-subscribe {
-  width: 570px;
-  max-width: 100%;
-}
+    & .footer-item:first-child .footer-contact {
+      color: #fff;
+    }
+  }
 
-.subscribe-form {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
+  &-item {
+    width: 100%;
+    text-align: center;
+  }
 
-.subscribe-input {
-  width: 358px;
-  max-width: 100%;
-  height: 50px;
-  padding: 0 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  background-color: transparent;
-  color: $color-primary;
-  outline: none;
-
-  &::placeholder {
+  &-contact {
+    display: block;
+    width: 100%;
+    margin: 0;
     color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
   }
 
-  &:focus {
-    border-color: $color-accent;
+  &-social {
+    width: 100%;
+    margin: 0 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-}
 
-.subscribe-button {
-  width: 200px;
-  height: 50px;
-  border: none;
-  border-radius: 4px;
-  background-color: $color-accent;
-  color: $color-primary;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.87;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  cursor: pointer;
-  transition: background-color 250ms ease;
-
-  &:hover,
-  &:focus {
-    background-color: #188ce8;
+  &-title,
+  &-detitle {
+    width: 100%;
+    margin: 0 0 20px;
+    color: #fff;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    text-align: center;
   }
-}
 
-.subscribe-icon {
-  font-size: 20px;
-}
+  &-detitle {
+    margin-top: 60px;
+  }
 
-.scroll {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  transform: rotate(-90deg);
-}
+  &-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
 
-.scroll-icon {
-  width: 20px;
-  height: 20px;
+  &-link {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    &:hover {
+      background-color: #2196f3;
+    }
+  }
+
+  &-icon {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+  }
+
+  &-form {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  &-subscribe {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  &-send {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: 50px;
+    margin: 0;
+    padding: 0 12px;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    outline: none;
+    resize: none;
+    overflow: hidden;
+    appearance: none;
+    -webkit-appearance: none;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  &-btn {
+    width: 200px;
+    max-width: 100%;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #fff;
+    background-color: #2196f3;
+    border: none;
+    border-radius: 4px;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  &-tlg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    fill: #fff;
+  }
+
+  .items-div {
+    width: 100%;
+    margin: 0 0 60px;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 480px) {
+    padding: 55px 0 50px;
+
+    & .container {
+      max-width: 768px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    &-box {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    &-logo-wrap {
+      margin: 0 0 20px;
+    }
+
+    &-list {
+      max-width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    &-item {
+      margin: 0;
+      padding: 0;
+    }
+
+    &-contact {
+      text-align: center;
+    }
+
+    &-title,
+    &-detitle {
+      margin: 0 0 20px;
+    }
+
+    &-subscribe {
+      gap: 18px;
+      box-sizing: border-box;
+    }
+
+    &-send {
+      width: 450px;
+      max-width: 100%;
+      font-family: Roboto, sans-serif;
+      font-size: 14px;
+    }
+
+    &-btn {
+      width: 170px;
+      gap: 8px;
+      letter-spacing: 0.96px;
+      box-sizing: border-box;
+    }
+
+    &-tlg {
+      width: 26px;
+      height: 26px;
+      flex: 0 0 26px;
+    }
+
+    .items-div {
+      max-width: 100%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 60px 0 40px;
+
+    & .container {
+      max-width: 768px;
+      justify-content: space-between;
+    }
+
+    &-box {
+      width: 230px;
+      flex: 0 0 230px;
+      margin-right: 0;
+    }
+
+    &-list {
+      margin: 0;
+    }
+
+    &-form {
+      width: 100%;
+      flex: 0 0 100%;
+      margin-top: 60px;
+    }
+
+    &-subscribe {
+      width: 100%;
+    }
+
+    &-send {
+      width: 450px;
+      max-width: 100%;
+    }
+
+    &-btn {
+      width: 200px;
+      gap: 10px;
+    }
+
+    .items-div {
+      width: 206px;
+      flex: 0 0 206px;
+      margin: 0;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    padding: 60px 0;
+
+    & .container {
+      max-width: 1200px;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    &-box {
+      width: 230px;
+      flex: 0 0 230px;
+      margin: 0 40px 0 0;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    &-logo-wrap {
+      text-align: left;
+    }
+
+    &-list {
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    &-item {
+      text-align: left;
+    }
+
+    &-contact {
+      text-align: left;
+    }
+
+    &-social {
+      width: 206px;
+      flex: 0 0 206px;
+      margin: 0;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    &-title,
+    &-detitle {
+      text-align: left;
+    }
+
+    &-links {
+      justify-content: flex-start;
+    }
+
+    &-form {
+      width: 570px;
+      flex: 0 0 570px;
+      margin: 0;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    &-subscribe {
+      width: 570px;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+    }
+
+    &-send {
+      width: 358px;
+      max-width: none;
+      flex: 0 0 358px;
+    }
+
+    &-btn {
+      width: 200px;
+      flex: 0 0 200px;
+    }
+
+    &-tlg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .items-div {
+      width: 206px;
+      flex: 0 0 206px;
+      margin: 0 auto 0 0;
+      text-align: left;
+    }
+  }
 }
